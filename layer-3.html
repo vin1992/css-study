@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left:0;
+            margin: 300px auto;
+            width:300px;
+            height:200px;
+            background:#fff;
+            color: red;
+        }
+        .content::backdrop {
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <!-- backdrop 实现遮罩 -->  
+    <dialog id="content">content</dialog>
+</body>
+<script>
+    let dom = document.getElementById('content');
+    dom.showModal();
+
+    dom.addEventListener('click',() => {
+        dom.close();
+    })
+</script>
+</html>

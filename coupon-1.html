@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body {
+            background:lightgreen;
+        }
+        .box {
+            width:200px;
+            height: 100px;
+            background:lightcoral;
+            position: relative;
+            overflow: hidden;
+        }
+        .box::before,.box::after {
+            position: absolute;
+            content:"";
+            top:10px;
+            width:0;
+            height: 100%;
+
+        }
+        .box::before {
+            left: -5px;
+            border-left:10px dotted #fff;
+            
+        }
+        .box::after {
+            right: -5px;
+            border-right:10px dotted #fff;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
