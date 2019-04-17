@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+      .loader {
+        width:100px;
+        height: 100px;
+        background:url('./img/loader.png');
+        animation:load 1s infinite steps(8);
+        overflow: hidden;
+        text-indent:-200%;
+      }
+
+      @keyframes load {
+        to {
+          background-position: -800px 0;
+        }
+      }
+    </style>
 </head>
 <body>
-    
+    <div class="loader">loading...</div>
 </body>
 </html>
